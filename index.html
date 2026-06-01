@@ -138,80 +138,6 @@
   .cert-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
 
-  /* RESUME */
-  #resume { background: var(--bg); }
-  .resume-view-wrap { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
-  .resume-preview-card {
-    width: 100%;
-    max-width: 560px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .resume-preview-top {
-    background: linear-gradient(135deg, #0d1525 0%, #111a30 100%);
-    padding: 2.5rem 2rem 2rem;
-    border-bottom: 1px solid var(--border);
-    position: relative;
-    overflow: hidden;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .resume-preview-top::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
-    background-size: 20px 20px;
-  }
-  .resume-preview-top::after {
-    content: '';
-    position: absolute;
-    top: -60px; right: -60px;
-    width: 200px; height: 200px;
-    background: radial-gradient(circle, rgba(0,212,255,0.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .resume-doc-lines { display: flex; flex-direction: column; gap: 8px; position: relative; z-index: 1; }
-  .resume-doc-line { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.07); }
-  .resume-doc-line.name-line { width: 55%; background: rgba(0,212,255,0.3); height: 11px; }
-  .resume-doc-line.role-line { width: 38%; background: rgba(0,212,255,0.15); height: 7px; }
-  .resume-doc-line.l-wide { width: 75%; }
-  .resume-doc-line.l-med { width: 55%; }
-  .resume-doc-line.l-short { width: 38%; }
-  .resume-file-tag {
-    position: relative; z-index: 2;
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(0,212,255,0.1);
-    border: 1px solid rgba(0,212,255,0.2);
-    border-radius: 4px; padding: 5px 14px;
-    font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent);
-    width: fit-content;
-  }
-  .resume-file-tag svg { width: 12px; height: 12px; }
-  .resume-preview-bottom { padding: 1.75rem 2rem; display: flex; flex-direction: column; gap: 1.25rem; }
-  .resume-name-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; }
-  .resume-name { font-family: var(--sans); font-size: 20px; font-weight: 800; color: var(--text); letter-spacing: -0.3px; }
-  .resume-meta { display: flex; gap: 1rem; flex-wrap: wrap; }
-  .resume-meta-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--muted); }
-  .resume-meta-item svg { width: 12px; height: 12px; stroke: var(--muted); }
-  .resume-divider { height: 1px; background: var(--border); }
-  .btn-view-resume {
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    padding: 14px 24px; border-radius: 6px;
-    background: var(--accent); color: var(--bg);
-    font-family: var(--mono); font-size: 12px; font-weight: 700;
-    letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none;
-    transition: all 0.2s; width: 100%;
-  }
-  .btn-view-resume:hover { background: #33ddff; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,212,255,0.25); }
-  .btn-view-resume svg { width: 16px; height: 16px; }
-
   /* CONTACT */
   #contact { background: var(--bg2); text-align: center; }
   #contact h2 { margin-bottom: 1rem; }
@@ -259,7 +185,6 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certifications">Certs</a></li>
-    <li><a href="#resume">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -501,68 +426,10 @@
   </div>
 </section>
 
-<!-- RESUME -->
-<section id="resume">
-  <div class="container">
-    <div class="section-label">06 — My resume</div>
-    <h2>Resume</h2>
-    <div class="resume-view-wrap">
-
-      <div class="resume-preview-card">
-        <div class="resume-preview-top">
-          <div class="resume-doc-lines">
-            <div class="resume-doc-line name-line"></div>
-            <div class="resume-doc-line role-line"></div>
-            <div style="height:6px"></div>
-            <div class="resume-doc-line l-wide"></div>
-            <div class="resume-doc-line l-med"></div>
-            <div class="resume-doc-line l-short"></div>
-            <div style="height:4px"></div>
-            <div class="resume-doc-line l-wide"></div>
-            <div class="resume-doc-line l-short"></div>
-            <div class="resume-doc-line l-med"></div>
-            <div class="resume-doc-line l-wide"></div>
-          </div>
-          <div class="resume-file-tag">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            PDF · Resume
-          </div>
-        </div>
-
-        <div class="resume-preview-bottom">
-          <div class="resume-name-row">
-            <div class="resume-name">Adama Koushik Reddy</div>
-          </div>
-          <div class="resume-meta">
-            <div class="resume-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Updated 2025
-            </div>
-            <div class="resume-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              Hyderabad, India
-            </div>
-            <div class="resume-meta-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              B.Tech CSE · Data Science
-            </div>
-          </div>
-          <div class="resume-divider"></div>
-          <a href="Koushik_Resume_.pdf" target="_blank" class="btn-view-resume">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            View Resume
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section id="contact">
   <div class="container">
-    <div class="section-label" style="justify-content: center;">07 — Let's connect</div>
+    <div class="section-label" style="justify-content: center;">06 — Let's connect</div>
     <h2>Get In Touch</h2>
     <p class="contact-sub">Whether it's a collaboration, internship opportunity, or just a chat about data and tech — my inbox is always open.</p>
     <div class="contact-links">
